@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title> 실습 #2 </title>
+	</head>
+	<body>
+		<p align="center">
+		<input type="button" onclick="jstest()" value="클릭시 실행"/> </p>
+	</body>
+</html>
+<script>
+	function jstest(){
+		var a = prompt("숫자입력", "");
+		var b = prompt("숫자입력", "");
+		var c = prompt("숫자입력", "");
+		alert("1번째 입력 값 : " + a + "\n2번째 입력 값 : " + b + "\n3번째 입력 값 : " + c );
+		var a1 = Number(a);
+		var b1 = Number(b);
+		var c1 = Number(c);
+		document.write("입력한 수 : " + a + " " + b + " " + c);
+						var d = a1;
+						if (b1 > d) d = b1;
+						if (c1 > d) d = c1;
+		document.write("<br>가장 큰 수 : " + d);
+	}
+</script>

@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title> 실습 #4 </title>
+		<style>
+			table{
+				border-collapse:collapse;
+				border:none;
+			}
+			td {
+				border:none;
+				width:55px;
+				height:50px;
+			}
+		</style>
+	</head>
+	<body id="mybgcolor">
+	
+		<table border="1" align="center">
+		<tr><td bgcolor="red" onmouseover="change1()"></td>
+			<td bgcolor="blue" onmouseover="change2()"></td>
+			<td bgcolor="green" onmouseover="change3()"></td>
+		</tr> </table>
+		
+		<script>
+			function change1() {
+				document.getElementById("mybgcolor").style.backgroundColor = "red";
+			}
+			function change2() {
+				document.getElementById("mybgcolor").style.backgroundColor = "blue";
+			}
+			function change3() {
+				document.getElementById("mybgcolor").style.backgroundColor = "green";
+			}
+		</script>
+	</body>
+</html>
