@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>MY CALCULATOR</title>
+		<style>
+			body {
+				background-color: #502064;
+			}
+			.calculator {
+				width: 300px;
+				height: 460px;
+				background-color: #8267BE;
+				border-radius: 20px;
+				margin: 60px auto;
+				text-align: center;
+				
+			}
+			.screen {
+				width: 265px;
+				height: 120px;
+				background-color: #2F3A8F;
+				border: none;
+				outline: none;
+				text-align: center;
+				vertical-align: middle;
+				border-radius: 15px;
+				margin: 15px auto 8px auto;
+				padding: 0 10px;
+				color: white;
+				font-size: 40px;
+				display: inline-block;
+			}
+			.allClear, .result {
+				width: 125px;
+				height: 50px;
+				background-color: #3FA796;
+				border-radius: 18px;
+				border: solid 4px #A68DAD;
+				font-size: 15px;
+				font-weight: bold;
+				margin: 5px 1px;
+				cursor: pointer;
+			}
+			.num, .decimalP {
+				width: 60px;
+				height: 55px;
+				background-color: #FFBD35;
+				border-radius: 18px;
+				border: solid 4px #A68DAD;
+				font-size: 15px;
+				font-weight: bold;
+				margin: 3px 1px;
+				cursor: pointer;
+			}
+			#zero {
+				width: 126px;
+			}
+			.operator {
+				width: 55px;
+				height: 55px;
+				background-color: #2F3A8F;
+				border-radius: 18px;
+				border: solid 4px #A68DAD;
+				color: white;
+				font-size: 15px;
+				margin: 3px 1px;
+				cursor: pointer;
+			}
+			input:hover{
+				box-shadow: 1px 1px 3px #333;
+			}
+		</style>
+	</head>
+	<body>
+		<form name="form1">
+			<div class="calculator">
+				<input type="text" class="screen" id="screen">
+				<input type="button" class="allClear" value="AC" onclick="document.form1.screen.value=''">
+				<input type="button" class="result" value="=" onclick="document.form1.screen.value=eval(document.form1.screen.value)">
+				
+				<input type="button" class="num" value="7" onclick="add(7)">
+				<input type="button" class="num" value="8" onclick="add(8)">
+				<input type="button" class="num" value="9" onclick="add(9)">
+				<input type="button" class="operator" value="+" onclick="add('+')">
+				
+				<input type="button" class="num" value="4" onclick="add(4)">
+				<input type="button" class="num" value="5" onclick="add(5)">
+				<input type="button" class="num" value="6" onclick="add(6)">
+				<input type="button" class="operator" value="-" onclick="add('-')">
+				
+				<input type="button" class="num" value="1" onclick="add(1)">
+				<input type="button" class="num" value="2" onclick="add(2)">
+				<input type="button" class="num" value="3" onclick="add(3)">
+				<input type="button" class="operator" value="*" onclick="add('*')">
+				
+				<input type="button" class="num" id="zero" value="0" onclick="add(0)">
+				<input type="button" class="decimalP" value="." onclick="add('.')">
+				<input type="button" class="operator" value="/" onclick="add('/')">
+			</div>
+		</form>
+	</body>
+</html>
+<script>
+	function add(content) {
+		var screen = document.getElementById('screen');
+		screen.value += content;
+	}
+</script>
