@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>MY CLOCK</title>
+		<style>
+			body {
+				background-color: #F7819F;
+				display: flex;
+    			align-items: center;
+			}
+			.clock {
+				width: 400px;
+				height: 200px;
+				background-color: #A9F5F2;
+				text-align: center;
+				font-family: fantasy;
+				margin: auto;
+				border: outset 10px #E1F5A9;
+				border-radius: 7px;
+				color: #5882FA;
+				
+			}
+			#date {
+				font-size: 40px;
+				line-height: 100px;
+			}
+			#time {
+				font-size: 70px;
+				line-height: 65px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="clock">
+			<div id="date">	</div>
+			<div id="time">	</div>
+		</div>
+	</body>
+</html>
+<script>
+	const date = document.getElementById("date");
+	const time = document.getElementById("time");
+	function get(){
+		var pre = new Date();
+		var year = pre.getFullYear();
+		var month = pre.getMonth() + 1;
+		var day = pre.getDate();
+		var hour = pre.getHours();
+		var min = pre.getMinutes();
+		var sec = pre.getSeconds();
+		year = (year < 10) ? '0' + year : year;
+		month = (month < 10) ? '0' + month : month;
+		day = (day < 10) ? '0' + day : day;
+		hour = (hour < 10) ? '0' + hour : hour;
+		min = (min < 10) ? '0' + min : min;
+		sec = (sec < 10) ? '0' + sec : sec;
+		date.textContent = year + '. ' + month + '. ' + day
+		time.textContent = hour + ' : ' + min + ' : ' + sec
+	}
+	get();
+	setInterval(get, 1000);
+</script>
